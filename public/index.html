@@ -1,0 +1,39 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator and Text Processor</title>
+</head>
+<body>
+  <h1>Calculator</h1>
+  <form action="/calculate" method="post">
+    <label for="num1">Number 1:</label>
+    <input type="number" name="num1" required><br>
+    <label for="num2">Number 2:</label>
+    <input type="number" name="num2" required><br>
+    <label for="operator">Operator (+, -, *, /):</label>
+    <input type="text" name="operator" required><br>
+    <button type="submit">Calculate</button>
+  </form>
+
+  <h1>Text Processor</h1>
+  <form action="/process-text" method="post">
+    <label for="text">Text:</label>
+    <textarea name="text" rows="4" cols="50" required></textarea><br>
+    <label for="operation">Operation:</label>
+    <select name="operation" required>
+      <option value="splitWords">Split Words</option>
+      <option value="extractSubstring">Extract Substring</option>
+      <option value="removeSpaces">Remove Spaces</option>
+      <option value="capitalize">Capitalize</option>
+      <option value="toLowerCase">To Lowercase</option>
+      <option value="toUpperCase">To Uppercase</option>
+      <option value="countCharacters">Count Characters</option>
+    </select><br>
+    <button type="submit">Process Text</button>
+  </form>
+</body>
+</html>
